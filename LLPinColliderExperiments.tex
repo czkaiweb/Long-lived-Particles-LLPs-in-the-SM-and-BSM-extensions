@@ -1,0 +1,240 @@
+\section{Experimental coverage of Long-lived Particle Signature in Collider Experiments}
+
+There are a broad variety of signatures of LLPs in collider experiments as shown in introduction. It is challenging to make a full coverage of experimental signatures for all possible LLP decay processes with the varied and atypical objects in LLP searches. To comprehensively review current experimental coverage, searches are classified into different channels, including hadronic decays, leptonic decays, semi-leptonic decays, photonic decays and exotic signatures. The displaced lengths also affect the signature and methods of LLP researches. LLP signature in collider experiments can be categorized into the Cartesian product of decay channels and decay positions, see Tab.\ref{tab:LLPsignature}. For many LLP signatures, a major challenge is the lack of efficient trigger. With the exception of certain dedicated triggers on ATLAS, no L1 trigger are currently available exploiting the displaced nature of LLP signatures. Current constraints on LLPs, algorithms optimized for displaced algorithm as well as trigger strategies on collider experiments are reviewed.
+
+%\onecolumngrid
+\begin{table*}[!htbp]
+    \centering
+    \caption{LLP signatures are categorized into (decay channel)$\times$(displaced length).}
+    \begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+        \hline
+                        & \textbf{hardonic}  & \textbf{leptonic} & \textbf{semi-leptonic} & \textbf{photonic} & \textbf{exotic}    \\
+        \hline
+        \textbf{Tracker}    & displaced jets (+ $\slashed{E}_T$) & displaced lepton & & &            \\
+        \hline
+        \textbf{ECal/HCal}  &    & & & &           \\
+        \hline
+        \textbf{MS}         &     & & & &          \\
+        \hline
+        \textbf{Beyond MS}  &     & & & &          \\
+        \hline
+        \end{tabular}
+    \label{tab:LLPsignature}
+\end{table*}
+%\twocolumngrid
+
+\subsection{Hadronic Decays}
+Several researches are performed on ATLAS and CMS, including searches for two objects decaying in HCAL \cite{Aaboud:2019opc,Aad:2015asa}, ID/MS \cite{Aad:2015uaa,Aaboud:2018aqj} and ID decays with large $\slashed{E}_T$ ( +jets/leptons) \cite{Aaboud:2017iio,Aad:2015rba} , displaced jets \cite{Sirunyan:2018vlw,Sirunyan:2017jdo,CMS:2014wda} and displaced vertices (DV) in multijet events \cite{Sirunyan:2018pwn}. 
+
+\subsubsection{hadronic decays in ATLAS}
+The reconstruction of displaced track is an essential part of displaced object identification. In the ATLAS ID, displaced track reconstruction follows a two-step procedure. In the first iteration, the default track identification algorithm is applied. Hits which are not associated to track in the first run are used in a second run with loose requirements on the transverse and longitudinal impact parameter ($d_0$ and $z_0$) and number of silicon hits shared with other tracks. This algorithm is referred to as \textit{large radius tracking} (LRT) algorithm by ATLAS collaboration. 
+Dedicated \textit{CalRatio} and \textit{MuonRoI} triggers are employed for LLP decaying in the HCAL/MS \cite{Aaboud:2019opc,Aaboud:2017iio}. For hadronic decay of neutral particle into two  in calorimeter, a higher ratio of energy deposit in HCAL is expected while there is no associated track to the energy deposit. The ratio $E_H/E_EM$, referred as \textit{CalRatio} is adopted as a dedicated trigger for neutral LLPs decaying near the outer layers of ECAL or within the HCAL. For hadronic decay in ATLAS muon spectrometer, the Muon RoI Cluster trigger which requires a $\Delta R=0.4$ radius regions in MS barrel/endcap containing 3/4 muon RoIs \cite{Aad:2013txa} are used for decays of LLPs in MS, the \textit{MuonRoI} trigger is efficient for LLPs decays between $3-7 m$ transversely or $5-13 m$ longitudinally from the primary vertex (PV), for LLP masses greater than $10 GeV$. A combined result of neutral decay in calorimeter and muon spectrometer is shown in Fig.\ref{fig:NeutralLLPinATLAScalSummary}. The combined result shows good sensitivity for $c\tau \sim 1m$ which decided by trigger strategy and the geometry of ATLAS detector.
+\begin{figure}[!htbp]
+    \centering
+    \caption{The combined limits for models with $m_\Phi = 125 GeV$ and $m_\Phi = 600 GeV$ from the \textit{CalRatio} and \textit{MuonRoI} analysis with process $\Phi \rightarrow ss \rightarrow fff^{'}f^{'}$, which separated into the MS 1-vertex plus $E_T^{miss}$ (MS1) and MS 2-vertex (MS2) components. The MS1 component of the MS displaced jet search was only applied to models with $m_\Phi = 125 GeV$. The expected limit is shown as a dashed line with shading for the $\pm 1\sigma$ band, while the observed is a solid line. The colours of the shading and solid and dashed lines refer to the limits from each analysis and their combination, as indicated in the legend. From Ref.\cite{Aaboud:2019opc} }
+    \includegraphics[width=0.5\textwidth]{fig/NeutralLLPinATLAScal.png}
+    \label{fig:NeutralLLPinATLAScalSummary}
+\end{figure}
+
+\subsubsection{hadronic decay in CMS}
+
+In CMS, the tracking algorithm is based on Kalman filter and can be divided into four steps logically: the \textit{seeding}, in which a proto-track is formed starting from two or three consecutive hits with either a beam spot or a vertex constrain; the \textit{pattern recognition}, during which the proto-trackis propagated into the CMS tracker and compatible hits are associated to the proto-track; the \textit{fitting}, in which the best parameters’ estimate is computed for all hits along the  trajectory; and the \textit{final selection}, in which quality criteria are applied to the tracks to reject the badly reconstructed ones and to reduce the fake rate. This procedure run iteratively, at each iteration, the hits associated to high quality tracks are masked and reduce the complexity of following iterations. During CMS Run \RomanNumeralCaps{2}, ten iterations are deployed with different seedings \cite{CMSPFreconstruction}.
+
+%\onecolumngrid
+\begin{table*}[!htbp]
+    \centering
+    \caption{Seeding configuration and targeted tracks of the ten tracking iterations. In the last column, $R$ is the targeted distance between the track production position and the beam axis.}
+    \begin{tabular}{cccc}
+    \hline
+    Iteration  &  Name & Seeding  & Targeted Tracks \\
+    \hline
+    1  &  InitialStep       &  pixel triplets       & prompt, high $p_T$ \\
+    2  &  DetachedTriplet   &  pixel triplets       & from b hadron decays,$R \apprle 5$ cm \\
+    3  &  LowPtTriplet      &  pixel triplets       & prompt, low $p_T$ \\
+    4  &  PixelPair         &  pixel pairs          & recover high $p_T$ \\
+    5  &  MixedTriplet      &  pixel+strip triplets & displaced, $R \apprle 7$ cm \\
+    6  &  PixelLess         &  strip triplets/pairs & very displaced,$R \apprle 25$ cm \\
+    7  &  TobTec            &  strip triplets/pairs & very displaced,$R \apprle 60$ cm \\
+    8  &  JetCoreRegional   &  pixel+strip pairs    & inside high $p_T$  jets   \\
+    9  &  MuonSeededInOut   &  muon-tagged tracks   & muons  \\
+    10 &  MuonSeededOutIn   &  muon detectors       & muons \\
+    \hline
+    \end{tabular}
+    \label{tab:my_label}
+\end{table*}
+%\twocolumngrid
+
+CMS has inclusive searches for displaced jets using 13 TeV data \cite{Sirunyan:2018vlw,Sirunyan:2018pwn}. The CMS analyses are based on dedicated offline displaced jet tagging algorithm using track information to identify pairs of displaced jets. Displaced tracks associated to each dijet candidate are used to reconstruct a secondary vertex with an adaptive vertex fitter algorithm. Signal preselection criteria require the secondary vertex has $\chi^2/n_dof < 5$, $M_{inv,vertex} > 4$ GeV assuming the pion mass for all assigned tracks and $p_{T,vertex} > 8$ GeV to remove long-lived SM hadrons. In the analysis for 13 TeV data in 2016, an additional variable, $\zeta$, is introduced to characterize the prompt activity to the jet, which is the charged energy fraction of the dijet associated with the most compatible PV. To select the most compatible PV, jet-associated tracks are assigned to primary vertex (PV) if the minimal 3-dimensional impact parameter (IP) significance is less than 5. 
+
+\begin{equation}
+\zeta = \frac{\Sigma_{track\in PV_1}E^{Jet_1}_{track}+\Sigma_{track\in PV_2}E^{Jet_2}_{track}}{E^{Jet_1}_{track}+E^{Jet_2}_{track}}
+\end{equation}
+
+The triggers used are based on large $H_T = \Sigma |p_{T,j}| = 350 (500)$ GeV for $8 (13)$ TeV, where the $H_T$ sums over jets with $p_{T,j} > 40$ GeV and $|\eta_j| <  3.0$. The signal is interpreted as neutral LLP decaying hardonically and color-charged LLP decaying into a jet plus a lepton. 
+
+For event selection, an auxiliary algorithm is introduced to reveal the consistency of displaced vertex. The displaced tracks associated to dijet are clustered based on the expected transverse decay length with respect to the leading primary vertex $L_{xy}^{exp}$ using a hierarchical clustering algorithm. The cluster root-mean-square (RMS), which is a relative RMS of individual tracks $L_{xy}^{exp}$ with respect to the secondary vertex $L_{xy} $ is computed for signal-background discrimination:
+
+\begin{equation}
+    RMS_{cluster} = \sqrt{\frac{1}{N_{tracks}\sigma^{N_{tracks}}_{i=1}}\frac{(L_{xy}^{exp}(i)-L_{xy})^2}{L^2_{xy}}}
+\end{equation}
+
+The likelihood discriminant is constructed with vertex track multiplicity, vertex $L_{xy}$ significance and cluster RMS among which the correlations are small. The result for scaler decay $X \rightarrow q\bar{q}$ is shown in Fig. \ref{fig:CMSjetjet}. Results for other models can be found in Ref. \cite{Sirunyan:2018vlw}.
+
+\begin{figure}
+    \centering
+    \caption{The expected and observed $95\%$ CL upper limits on the pair production cross section of the long-lived particle X, assuming a $100\%$ branching fraction for X to decay to a quark-antiquark pair, shown at different particle X masses and proper decay lengths for the jet-jet model. The solid (dashed) lines represent the observed (median expected) limits. The shaded bands represent the regions containing $68\%$ of the distributions of the expected limits under the background-only hypothesis. From Ref. \cite{Sirunyan:2018vlw}}
+    \includegraphics[width=0.5\textwidth]{fig/CMShardonic.png}
+    \label{fig:CMSjetjet}
+\end{figure}
+
+
+
+
+
+\subsubsection{hardonic decay in LHCb}
+The LHCb is optimized for B physics and use an asymmetric design which make LHCb detector suitable for LLP with shorter time and lower mass. The LHCb searches directly trigger on DV with a transverse distance $L_{xy} > 4mm$ and four or more tracks. The trigger thresholds are low, e.g. the invariant mass of particles associated with the vertex must exceed 2 GeV and the scalar sum $p_T$ of tracks at the vertex must exceed 3 GeV. The jet algorithm is the standard algorithm. The benchmark model used is the decay of scalar into neutral LLP pair, $\pi_{\nu}$ (dark or valley pions) which corresponds to the decay of Higgs/Higgs-like particle. The $\pi_{\nu}$  masses are between 25 and 50 GeV in this search and decay length between 0.6 to 15 mm. LHCb extends the coverage for lower mass LLP with fat jet algorithm and jet  substructure dealing large boosts. Comparison of the ATLAS, CMS and LHCb are made for Higgs simplified model are shown in Fig. \ref{fig:LHCbHadronicCompare}.
+
+\begin{figure}
+    \centering
+    \caption{Comparison of the ATLAS, CMS and LHCb reaches for dark pions $\pi_{\nu}$ decaying into jets. The CMS result is taken from the recast done the 8 TeV analysi. In the shaded regions $B(H\rightarrow\pi_{\nu}\pi_{\nu})$ is constrained to be below $50\%$. Note that the ATLAS reach extends to higher masses as well; The meaningful bound is on the lifetimes. TFrom Ref.\cite{alimena2019searching}}
+    \includegraphics[width=0.5\textwidth]{fig/LHCbhadronicCompare.png}
+    \label{fig:LHCbHadronicCompare}
+\end{figure}
+
+
+\subsubsection{summary for hadronic decay}
+Current searches with hadronic final states do not cover low mass (<100 GeV) LLP due to the large $p_{T,j}$ trigger requirement with the exception being the DV reconstruction at LHCb. Also, searching strategy in ATLAS require two LLPs decays in detector and lose the sensitivity to singly produced LLP. 
+
+A potential way to extend the coverage of LLP search is to extend the trigger methods and perform the hadronic DV reconstruction offline.Triggering on associated prompt object would improve the sensitivity of low mass LLP significantly.
+
+
+\subsection{Leptonic Decays}
+All three experiments have searches for displaced pair production of leptons. On CMS, dilepton with different flavour and large transverse impact parameter are also searched. Light and boosted LLPs can decay into collimated leptons, known as \textit{lepton-jets}, which are searched in both CMS and ATLAS. The LHCb also search for light. neutral LLPs decaying into muon pair.
+
+\subsubsection{Leptonic decay in CMS}
+The CMS tracker-based search trigger on two clustered energy passing loose requirements with photon/electron hypothesis for electron channel and on twp reconstructed muon from muon system without using any PV constraint. The LLP candidates are formed from two opposite-signed muons with $p_T > 26$ or two electrons with higher(lower) $E_T> 40(25)$ GeV. Large transverse impact parameter significance with respect to  PV ( $|d_0|/\sigma_d > 12$) is required for tracks to reject promptly produced particles.  In an implemented research using muon system only, muon candidates are reconstructed from muon system alone. An additional refit step is applied to  the candidates to avoid biases from  a loose beamspot constraint in the seeding step. The candidates then referred as \textit{re-fitted stand-alone} (RSA) muons. Also, the muons are vetoed if they can match to track in the inner tracker. The searches are interpreted in term of SM-like Higgs decay ($H\rightarrow XX, X\rightarrow l^+ l^-$) and RPV squarks and provide sensitivity covering $c\tau$ from $ 10^{-2} (10^{-1})$cm to $ 10^{5} (10^{4})$cm for Higgs (RPV) scenario. The tracker-based search show a high sensitivity plateau with $c\tau \sim 10^{-1}-10$ cm in both electron and muon channels, while the combined result of tracker and muon chamber increases the sensitivity for muon channel with $c\tau > 10$cm. The results are shown in Fig. \ref{fig:LpetonicCMStrackerMuMu} and \ref{fig:LpetonicCMSMSMuMu}.
+
+\begin{figure}
+    \centering
+    \caption{Caption}
+    \includegraphics[width=0.5\textwidth]{fig/LpetonicCMStrackerMuMu.png}
+    \label{fig:LpetonicCMStrackerMuMu}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \caption{Caption}
+    \includegraphics[width=0.5\textwidth]{fig/LpetonicCMSMSMuMu.png}
+    \label{fig:LpetonicCMSMSMuMu}
+\end{figure}
+
+
+\subsubsection{Leptonic decay in ATLAS}
+ A primary ATLAS search for displaced lepton triggers on muons, electrons or photons. The trigger and offline $p_T$ criteria is relatively high which should pass one of the following: 1). a muon candidate with $p_T > 50$GeV, an electron candidate with $p_T >110$GeV or a photon candidate with $p_T > 130$GeV while the associated ID track are required to have $d_0 > 1.5$mm, 2). a pair of candidate electrons, photons or $e/\gamma$ pair, with $p_T$ threshold between 38 and 48 GeV per object, 3). either two 50 GeV trackless jets with $E_T^{miss} > 100$ GeV or one 45 GeV trackless jets with 4-6 jets passing the same $p_T$ thresholds.  The DV is reconstructed from opposite-sign lepton pair and must be over 4 mm from PV in the transverse plane. DVs in regions with dense detector matter are vetoed to reject backgrounds from converted photons. The high $p_T$ requirement lower the sensitivity of this search to low-mass LLPs.
+  A recent search done on ATLAS is using di-muon channel with muon system only, in which four separate trigger pathway are used: $\slashed{E}_T > 110 $GeV; one muon with $p_T > 60$GeV and $|\eta|<1.05$; two muons with $p_T > 15$GeV and $\Delta R_{\mu\mu}<0.5$; or three muons with $p_T > 6$GeV. Thus this search extend the sensitivity to low mass region ($m_{\mu\mu}=15$GeV) as well as with various lepton multiplicities.
+
+\subsubsection{Lepton-jet searches}
+Lepton-jets are signature with lepton pair or multiple leptons clustered in a narrow area, which usually originated from the decay of boosted objects. In the CMS search for lepton-jet, fully muonic lepton-jets are selected from 8 TeV and part of 13 TeV dataset. The 13 TeV study is sensitive to di-muon parent particle masses up to 8.5 GeV.
+
+\subsubsection{Summary for leptonic decay}
+
+\subsection{Semi-leptonic decay}
+
+\subsubsection{Semileptonic decay in CMS}
+
+\subsubsection{Semileptonic decay in ATLAS}
+
+\subsubsection{Semileptonic decay in LHCb}
+
+\subsubsection{Summary for semileptonic decay}
+
+\subsection{Photonic decay}
+
+\subsubsection{Photonic decay in CMS}
+
+\subsubsection{Photonic decay in ATLAS}
+
+\subsubsection{Photonnic decay in LHCb}
+
+\subsubsection{Summary for photonic decay}
+
+\subsection{Exotic long-lived signature}
+
+Searches for LLP signature with "standard" objects, e.g. jets, leptons and photons are covered in previous sections. While there are still many signatures which are completely distinguished from conventional signatures can be raised by exotic LLPs. These searches are described and summarized in this section, including \textit{disappearing tracks} (DT); \textit{heavy, stable charged particle} (HSCP); \textit{stopped particles} (SP) and monopoles. Other existing ideas searching for LLPs with \textit{quirks} and \textit{Strongly Interacting Massive Particles} (SIMPs) are also described. 
+
+Due to the complexity of exotic signatures, these searches are distinguished into three classes: \textit{LLPs with anomalous geometry}, \textit{LLPs with anomalous interaction} and  \textit{out-of-time decays}. Dedicated event selection are necessary as the trigger as well as  standard reconstruction algorithm have limited efficiency for those exotic signals. 
+
+\subsubsection{LLPs with anomalous geometry}
+In this section, LLP signals with anomalous tracking geometry are reviewed. Also, the merging jets signature studied on CMS is included. \\
+
+\textit{Disappearing Tracks(DT)}\\
+
+Massive charge particles traveling in the tracker region can decay into a lighter, almost mass-degenerated neutral particle emitting a soft charged SM particle, e.g. $\pi_{\pm}$ which is hard to be reconstructed in detector. A short track without hits in outer layer of tracker or MS and no associated energy deposit can be reconstructed with standard tracking algorithm, and a charged tracks seems to vanish which referred as disappearing track. The lifetime of charged particle is sensitive to the value of mass splitting as it is constrainted by final state phase space.
+
+Before 2017, both ATLAS and CMS  required a track to travel about 30 cm in order to be reconstructed, giving good coverage of the Wino scenario. This 30 cm value corresponds to four hits at ATLAS, three in the pixel layers plus one in the silicon tracker, and to seven hits in the pixel and trackers of CMS. The search employs a trigger requiring an ISR jet against which the charged particle recoils, along with the presence of large $\slashed{E}_T$. The disappearing track is reconstructed offline and needs to fulfill quality criteria (isolation, $p_T$ threshold, etc.). A phenomenological study has shown that reducing the distance from 30 to 10 cm would give coverage to the elusive Higgsino scenario, moving the expected reach up to 400 GeV, surpassing the expected mono-jet reach of 250 GeV. Later, ATLAS presented a study using 13 TeV data and exploiting the presence of a new innermost pixel layer (IBL). This addition allows for all four hits to be in the pixel, with the outermost pixel layer now at 12.25 cm, enhancing sensitivity to lower values of $c\tau$. CMS also has a disappearing tracks search using 2015 and 2016 data at a center-of-mass energy of 13 TeV which has stronger constraint for $c\tau > 1$ns, shown in Fig. \ref{fig:CMSDisappearingTrack2018}.
+
+\begin{figure}[!htbp]
+    \centering
+    \caption{The expected and observed constraints on chargino lifetime and mass. The region to the left of the curve is excluded at $95\%$ CL. From \textbf{cite needed}}
+    \includegraphics[width=0.5\textwidth]{fig/CMSDisappearingTrack2018.png}
+    \label{fig:CMSDisappearingTrack2018}
+\end{figure} 
+
+Current searches for disappearing tracks presents a few challenges: using an ISR jet as trigger lower the signal efficiency, Ref.\cite{DisappearingTrackWindow} has shown that significantly lowering the $p_T$ threshold of the jet or directly triggering on the momentum of the disappearing track would lead to a factor of two increase in the number of signal events; extending the sensitivity to lower lifetime is needed, which may only be archived by adding pixel layers closer to interaction vertex or increasing the spatial resolution dramatically. \\
+
+
+\textit{Quirks}\\
+
+Quirks are electrically charged particle which also color charged under a new confining gauge group, referred to as "infracolor" (IC). The new gauge interaction has confinement scale $\Lambda_{IC} < m_Q$, where $m_Q$ is the mass of quirk. The bound state of quirk-antiquirk is QCD-like system with weak "string" and the constituents are separated by macroscopic distance $l \sim \frac{m_Q}{\Lambda^2_{IC}}$ connected by an infracolor flux tube.
+
+The collider phenomenology depends significantly on the size of $l$, If $l$ is much less than the size of atom, the quirk annihilation take place even before the bound state reaching the beampipe, prompt tracks will be reconstructed. For large enough confinement scales,the infracolor glueball can decay into SM model with large displacement. In some specific case, quirks can produce hidden valley or emerging jet signatures. If the confining force from infracolor charge is weak and $l$ is very large, the constituents behave like heavy stable charged particle (HSCP) which will be discussed in LLPs with anomalous interaction.
+
+A challenging condition of $l$ is to be intermediate and about the size of detector, the confining force will also affect the trajectory of quirk inside the detector. The trjectory of quirk will be bent under both magnetic field and infracolor confining force and be non-helical. For now , there are several theoretical study proposing the search for quirks but there is no public search by the LHC collaborations yet. the lack of constraints on quirks have already attracted the attention of the ATLAS, CMS and LHCb experiments. It would be desirable to test how the phenomenological proposals can perform in a realistic detector simulation of one of the LHC experiments.\\
+
+\textit{Strongly Interacting Massive Particles (SIMPs)}
+\\
+
+Strongly interacting massive particles, motivated by astrophysical observation of dark matter which not fully agree with the WIMP paradigm, are assumed to interact strongly with baryons. The experimental signature is then large energy deposit in HCAL with little signal in the tracker and ECAL, which shown as trackless jet. This signature can be triggered by trackless jet associated with a soft muon and the \textit{CalRatio} on ATLAS. A LHC phenomenological study of SIMPs was carried out and proposed an analysis selecting events with high-$p_T$ , back-to-back jets within the tracker, exploiting the charged energy fraction within a jet to discriminate signal from background. The astrophysical experimental constraints on this scenario are compared with the expected reach of this search and that of mono-jets in Fig.\ref{fig:SIMP}.
+
+\begin{figure}
+    \centering
+    \caption{Astrophysical and collider applicable constraints on a simple SIMP setup. Note that the relevance of the astrophysical constraints depends on the contribution of the SIMPs to the relic density. From Ref.\cite{SimpleSIMP}}
+    \includegraphics[width=0.5\textwidth]{fig/SIMP.png}
+    \label{fig:SIMP}
+\end{figure}
+
+
+\subsubsection{LLPs with anomalous interaction}
+
+In this section, the searches for charged LLPs with anomalous interaction with detector are collected, including heavy, stable charged particles (HSCPs) and magnetic monopoles.\\
+
+\textit{Heavy Stable Charged Particles (HSCPs)}\\
+
+ The researches for HSCP on ATLAS and CMS based on two key properties: particles which is  massive and/or carrying electric charge $|Q| \neq e$ have a characteristic ionization loss ($dE/dx$) distinguishable from SM particles and HSCPs move with $\beta = v/c < 1$ which give rise to a longer time-of-flight (TOF) to reach the outermost component of detector. 
+
+Since the interaction between HSCP with detector can change its electric charge, studies performed on both ATLAS and CMS are separated into \textit{track-only} and \textit{tracker+TOF}. The trigger relies on standard single muon or large MET trigger, the offline selection relies on identifying the signal events from quality requirements on the tracks using discriminator variables built from track observables. In $dE/dx$ maesurement,
+ a discriminator $I_as$ is used to distinguish SM particle from HSCP candidate, which defined as:
+ 
+ \begin{equation}
+     I_{as} = \frac{3}{N}\times(\frac{1}{12N}+\sum_{i=1}^{N}[P_{i}\times(P_{i}-\frac{2i-1}{2N})^2])
+ \end{equation}
+ 
+ where $N$ is the number if measurements in the silicon-tracker detector, $P_i$ is the probability for a minimum-ionizing particle (MIP) to produce a charge smaller or equal to that of the $i$-th measurement for the observed path length in the detector, and the sum is over the track measurements ordered in term of increasing $P_i$. Detailed descriptions for \textit{track-only} and \textit{tracker+TOF} can be found in Ref. \cite{CMSHSCP2016}.
+
+The HSCP search on LHCb is slightly different, which use the lack of radiation emission in the ring imaging Cherenkov detector(RICH) instead of energy loss and TOF. An artificial neural network (ANN) is used to distinguish HSCP from muons by exploitingthe difference in interactions that these particles have in detector. Events are required to pass a high $p_T$ single muon trigger. Two opposite sign muon-like particle are required, each with $p_T$ over 50 GeV and an invariant "dimuon" mass above 100 GeV to suppress muon events from Drell-Yan process.
+ 
+The theoretical interpretation of a signal depends on the type of charge carried. If the HSCP carries a color charge, the benchmarks correspond to $R$-hadron which hadronize into SM particles via the strong interaction. In the absence of a color charge, the signal is interpreted by long-lived sleptons in the context of gauge-mediated SUSY. Both scenarios are employed in ATLAS and CMS studies while LHCb uses a stau benchmark model.  Also CMS looks for HSCPs coupling only to hypercharge and ATLAS has a study for associated production of a neutral and an electrically charged LLP, which is one HSCP with large missing energy. 
+
+To summarize, HSCP searches employ standard trigger and tracking algorithm  and the analysis methods are well-understood and validated by existing searches. However, milli-charge particles are not covered as the ionization in tracker system is tiny and  dedicated detectors, e.g. MilliQan, are proposed.\\
+
+\textit{Magnetic Monopoles}\\
+
+Magnetic monopole is predicted to explain the quantization of electric charge. The main phenomenological feature is that magnetic mnopole is highly ionizing particle (HIP) which hehaves like a particle carrying 68.5 electric charges. A dedicated searches for HIPs use trigger based on identifying relevant \textit{RoIs} in the ECAL and subsequently counting the number of hits in the transition radiation tracker (TRT). The fraction of TRT hits with ionization larger than $\sim 3$ times that expected from a SM particle is used as a discriminant. The event selection is based on the fraction of TRT-HT hits matched to an EM cluster deposit, and how the energy deposits are distributed in the different layers of the ECAL. 
+
+
+\subsubsection{Out-of-Time Decays of stopped particle}
+
+An unique signature of LLP is out-of-time decay when particles produce out of the collision time window. The only member of this class is the search of stopped particles (SP). For LLPs produced with low kinetic energy, they can lose all the kinetic energy through interaction with detector materials and stop inside the detector, most likely in the calorimeters or the steel yoke in the muon system as a result of their high material densities. The LLPs then decay later when no collision is taking place at beam spot. 
+
+Analysis are performed in ATLAS and CMS with Run I dataset. The events are selected with dedicated trigger selecting bunch crossings away from in-time collisions. The offline selection procedure is aimed at reducing the main backgrounds: cosmic muons, beam halo and instrumental noise. Muons from cosmic rays can be identified with distinctive topology and time structure. The "beam halo" background comes from the interaction between proton and pipeline/collimators, the produced muon travel parallel to the beam and leave energy deposit in calorimeter after a long time-of-flight. Instrumental noise is rejected in CMS by a series of offline criteria that exploit these timing and topological characteristics to remove spurious events due to noise.
+
