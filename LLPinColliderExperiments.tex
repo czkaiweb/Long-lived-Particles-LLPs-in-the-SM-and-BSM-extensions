@@ -141,15 +141,23 @@ In the CMS search for lepton-jet, fully muonic lepton-jets are selected from 8 T
 In ATLAS 8TeV search, three types of lepton-jets are considered: only-muon jet, electron/pion jet and inclusive of previous two types. The muon-only and electron/pion jet require two or four leptons while the mixted jet must contain two muons plus a jet consistent displaced with electron/pion pair. The trigger adopted requires three muon tracks in MS with $p_T$ > 6GeV, also the \textit{CalRatio} trigger is used for electron lepton-jet when electrons produced in HCAL. A \textit{narrow-scan} muon trigger is added in 13 Tev analysis. This trigger selects events with two muons close in $\eta-\phi$ plane, $\Delta R < 0.5$ with $p_T > 20(6)$GeV for (sub)leading muon. 
 
 Both the 8 and 13 TeV ATLAS searches are interpreted for Higgs-like scalar particles (with masses of 125 and 800 GeV) that decay effectively into either two or four lepton pairs, with each lepton pair assumed to come from a low-mass “dark" photon, $\gamma_D$ . The ATLAS result excludes exotic Higgs branching ratios below $10\%$ for dark photon lifetimes 2 < $c\tau$ < 100 mm. Note that here $\gamma_D$ is also allowed to decay to pions and so the results can also be interpreted for hadronically and semi-leptonically decaying LLPs. Also, there are some non-collider experiments constraining the parameter space of $\gamma_D$, which will be discussed in following chapter.
+\begin{figure}
+    \centering
+    \caption{Comparison of the lepton-jet searches at ATLAS, CMS as well as low-energy experiments with respect to a dark photon scenario}
+    \includegraphics[width=0.5\textwidth]{fig/leptonjet.png}
+    \label{fig:lepton-jet}
+\end{figure}
 
 The comparison of CMS and ATLAS searches are displayed in Fig. \cite{fig:lepton-jet}.
 
 
 \subsubsection{Summary for leptonic decay}
 
-
+The leptonic searches for LLP are based on fairly standard lepton identification and trigger. These searches typically benefit from the low trigger threshold  and good signal efficiency. A major and unavoidable challenge faced by extrapolating the leptonic searches to high-luminosity condition is how to maintain low-threshold trigger for displaced leptons. Another major challenge is coverage of LLP to $\tau$ leptons.Such searches are strongly motivated from theoretical point of view, as higgs-like scalar decays into $\tau^+\tau^-$ dominantly if kinematically permitted. A displaced hadronic $\tau$ is a striking object with few background. Thus the searches with displaced $\tau$s are critical.
 
 \subsection{Semi-leptonic decay}
+
+As semi-leptonic signature shares overlap with both leptonic and hadronic channels, many of the discussed searches are partially covered in this scenario.
 
 \subsubsection{Semileptonic decay in CMS}
 
@@ -161,13 +169,28 @@ The comparison of CMS and ATLAS searches are displayed in Fig. \cite{fig:lepton-
 
 \subsection{Photonic decay}
 
+As there is no associated track for photon signature, the methods for identifying displaced photon are critical in LLP searches with photonic decay. There are two ways to discriminate photon originating from LLP decay from standard photon. The first is \textit{non-pointing} photon which can not be traced back to PV, and a second one is \textit{delayed} photons when they arrive at the ECAL slower than speed of light. Both signatures are studied at ATLAS with 8 TeV dataset, while on CMS, non-pointing photon are detected via the conversion to $e^+e^-$ pairs. The benchmark model is gauge-mediated supersymmetry breaking (GMSB) in which the neutralino decays into a gravitino and a photon ($\chi^{0}_1 \rightarrow \gamma \tilde{G}$). All searches require large $\slashed{E}_T$ in the final state given the benchmark model. 
+
 \subsubsection{Photonic decay in CMS}
 
-\subsubsection{Photonic decay in ATLAS}
+The study of delayed photons on CMS, photons are reconstructed using a clustering algorithm that build a cluster of clusters(supercluster). The supercluster has large size in $\phi$ to recover the efficiency for photons which converted into charged particles and spread by strong magnetic field. The events are triggered by an offline trigger which require at least one isolated ECAL cluster with $E_T$ > 65 GeV and $E_T^miss$ > 25 GeV. Candidate photon are selected from ECAL photon with additional criteria on the shape of cluster. Events are selected if delay time $\delta t$ > 3ns and the timing measurement from multiple crystals are consistence ($\chi^2/nof$ < 4). Furthermore, $\slashed{E}_{T,no \gamma}$ which is the vector sum of $\slashed{E}_T$ and $E_T^{\gamma}$ is used for background discrimination. In signal seletion, both $\slashed{E}_T$ and $\slashed{E}_{T,no \gamma}$ are required to be over 60 GeV.
 
-\subsubsection{Photonnic decay in LHCb}
+For non-pointing photon, at least two high $p_T$ isolated photons in association with at least two jets and $E_T^miss$ are required. To identify the displaced photon, $e^+e^-$ pair converted from photon in tracker material are reconstructed. The photon trajectory are then determined from the election pair momentum and vertex with the straight-line assumption of photon. With this method, the reconstructed impact parameter $|d_{XY}|$ of photon adds $40\%$ uncertainty to the signal efficiency.
+
+\subsubsection{Photonic decay in ATLAS}
+The ATLAS study benefits from the capability of the liquid-argon eletromagnetic calorimeters to measure the flight direction and the photon's time of flight (TOF). Resolutions on $\Delta z_{\gamma}$, the separation between the PV of the event and the extrapolated origin of the photon, and $|\Delta t_{\gamma}|$, difference of the arrival time of the photon with respect to the prompt case, are as low as 15 mm and 0.25 ns,
+respectively. The trigger requires two photons with $E_T$ over 35 and 25 GeV, a PV with 5 or more is required to guarantee the event as $pp$ collision. The summary of the photonic searches on ATLAS and CMS is shown in Fig. \ref{fig:photonicdecay}.
+
+\begin{figure}
+    \centering
+    \caption{Summary of the $\gamma + \slashed{E}_T$ searches from ATLAS and CMS assuming the same GBSM model. From Ref.\cite{CMSDelayedPhoton}}
+    \includegraphics[width=0.5\textwidth]{fig/PhotonicDecay.png}
+    \label{fig:photonicdecay}
+\end{figure}
+
 
 \subsubsection{Summary for photonic decay}
+In the study on CMS, the identification of displaced photon is the major challenge for non-pointing photon channel which necessitate a development in algorithm. As large $\slashed{E}_T$  is required due to the benchmark model. These searches do not cover the cases without $\slashed{E}_T$, including LLPs that decay to $\gamma\gamma$, $l\gamma$ or $j\gamma$. Also, most searches require two displaced photons while single displaced photon signature is motivated. 
 
 \subsection{Exotic long-lived signature}
 
