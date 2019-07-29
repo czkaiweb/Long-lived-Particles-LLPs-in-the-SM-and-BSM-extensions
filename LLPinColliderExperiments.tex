@@ -1,7 +1,7 @@
 \section{Experimental coverage of Long-lived Particle Signature in Collider Experiments}
 
-There are a broad variety of signatures of LLPs in collider experiments as shown in introduction. It is challenging to make a full coverage of experimental signatures for all possible LLP decay processes with the varied and atypical objects in LLP searches. To comprehensively review current experimental coverage, searches are classified into different channels, including hadronic decays, leptonic decays, semi-leptonic decays, photonic decays and exotic signatures. The displaced lengths also affect the signature and methods of LLP researches. LLP signature in collider experiments can be categorized into the Cartesian product of decay channels and decay positions, see Tab.\ref{tab:LLPsignature}. For many LLP signatures, a major challenge is the lack of efficient trigger. With the exception of certain dedicated triggers on ATLAS, no L1 trigger are currently available exploiting the displaced nature of LLP signatures. Current constraints on LLPs, algorithms optimized for displaced algorithm as well as trigger strategies on collider experiments are reviewed.
-
+There are a broad variety of signatures of LLPs in collider experiments as shown in introduction. It is challenging to make a full coverage of experimental signatures for all possible LLP decay processes with the varied and atypical objects in LLP searches. To comprehensively review current experimental coverage, searches are classified into different channels, including hadronic decays, leptonic decays, semi-leptonic decays, photonic decays and exotic signatures. The displaced lengths also affect the signature and methods of LLP researches. LLP signature in collider experiments can be categorized into the Cartesian product of decay channels and decay positions. For many LLP signatures, a major challenge is the lack of efficient trigger. With the exception of certain dedicated triggers on ATLAS, no L1 trigger are currently available exploiting the displaced nature of LLP signatures. Current constraints on LLPs, algorithms optimized for displaced algorithm as well as trigger strategies on collider experiments are reviewed.
+\iffalse
 %\onecolumngrid
 \begin{table*}[!htbp]
     \centering
@@ -22,6 +22,7 @@ There are a broad variety of signatures of LLPs in collider experiments as shown
     \label{tab:LLPsignature}
 \end{table*}
 %\twocolumngrid
+\fi
 
 \subsection{Hadronic Decays}
 Several researches are performed on ATLAS and CMS, including searches for two objects decaying in HCAL \cite{Aaboud:2019opc,Aad:2015asa}, ID/MS \cite{Aad:2015uaa,Aaboud:2018aqj} and ID decays with large $\slashed{E}_T$ ( +jets/leptons) \cite{Aaboud:2017iio,Aad:2015rba} , displaced jets \cite{Sirunyan:2018vlw,Sirunyan:2017jdo,CMS:2014wda} and displaced vertices (DV) in multijet events \cite{Sirunyan:2018pwn}. 
@@ -39,8 +40,7 @@ Dedicated \textit{CalRatio} and \textit{MuonRoI} triggers are employed for LLP d
 \subsubsection{hadronic decay in CMS}
 
 In CMS, the tracking algorithm is based on Kalman filter and can be divided into four steps logically: the \textit{seeding}, in which a proto-track is formed starting from two or three consecutive hits with either a beam spot or a vertex constrain; the \textit{pattern recognition}, during which the proto-trackis propagated into the CMS tracker and compatible hits are associated to the proto-track; the \textit{fitting}, in which the best parameters’ estimate is computed for all hits along the  trajectory; and the \textit{final selection}, in which quality criteria are applied to the tracks to reject the badly reconstructed ones and to reduce the fake rate. This procedure run iteratively, at each iteration, the hits associated to high quality tracks are masked and reduce the complexity of following iterations. During CMS Run \RomanNumeralCaps{2}, ten iterations are deployed with different seedings \cite{CMSPFreconstruction}.
-
-%\onecolumngrid
+\onecolumngrid
 \begin{table*}[!htbp]
     \centering
     \caption{Seeding configuration and targeted tracks of the ten tracking iterations. In the last column, $R$ is the targeted distance between the track production position and the beam axis.}
@@ -62,7 +62,7 @@ In CMS, the tracking algorithm is based on Kalman filter and can be divided into
     \end{tabular}
     \label{tab:my_label}
 \end{table*}
-%\twocolumngrid
+\twocolumngrid
 
 CMS has inclusive searches for displaced jets using 13 TeV data \cite{Sirunyan:2018vlw,Sirunyan:2018pwn}. The CMS analyses are based on dedicated offline displaced jet tagging algorithm using track information to identify pairs of displaced jets. Displaced tracks associated to each dijet candidate are used to reconstruct a secondary vertex with an adaptive vertex fitter algorithm. Signal preselection criteria require the secondary vertex has $\chi^2/n_dof < 5$, $M_{inv,vertex} > 4$ GeV assuming the pion mass for all assigned tracks and $p_{T,vertex} > 8$ GeV to remove long-lived SM hadrons. In the analysis for 13 TeV data in 2016, an additional variable, $\zeta$, is introduced to characterize the prompt activity to the jet, which is the charged energy fraction of the dijet associated with the most compatible PV. To select the most compatible PV, jet-associated tracks are assigned to primary vertex (PV) if the minimal 3-dimensional impact parameter (IP) significance is less than 5. 
 
@@ -112,18 +112,18 @@ A potential way to extend the coverage of LLP search is to extend the trigger me
 All three experiments have searches for displaced pair production of leptons. On CMS, dilepton with different flavour and large transverse impact parameter are also searched. Light and boosted LLPs can decay into collimated leptons, known as \textit{lepton-jets}, which are searched in both CMS and ATLAS. The LHCb also search for light. neutral LLPs decaying into muon pair.
 
 \subsubsection{Leptonic decay in CMS}
-The CMS tracker-based search trigger on two clustered energy passing loose requirements with photon/electron hypothesis for electron channel and on twp reconstructed muon from muon system without using any PV constraint. The LLP candidates are formed from two opposite-signed muons with $p_T > 26$ or two electrons with higher(lower) $E_T> 40(25)$ GeV. Large transverse impact parameter significance with respect to  PV ( $|d_0|/\sigma_d > 12$) is required for tracks to reject promptly produced particles.  In an implemented research using muon system only, muon candidates are reconstructed from muon system alone. An additional refit step is applied to  the candidates to avoid biases from  a loose beamspot constraint in the seeding step. The candidates then referred as \textit{re-fitted stand-alone} (RSA) muons. Also, the muons are vetoed if they can match to track in the inner tracker. The searches are interpreted in term of SM-like Higgs decay ($H\rightarrow XX, X\rightarrow l^+ l^-$) and RPV squarks and provide sensitivity covering $c\tau$ from $ 10^{-2} (10^{-1})$cm to $ 10^{5} (10^{4})$cm for Higgs (RPV) scenario. The tracker-based search show a high sensitivity plateau with $c\tau \sim 10^{-1}-10$ cm in both electron and muon channels, while the combined result of tracker and muon chamber increases the sensitivity for muon channel with $c\tau > 10$cm. The results are shown in Fig. \ref{fig:LpetonicCMStrackerMuMu} and \ref{fig:LpetonicCMSMSMuMu}.
+The CMS tracker-based search trigger on two clustered energy passing loose requirements with photon/electron hypothesis for electron channel and on twp reconstructed muon from muon system without using any PV constraint. The LLP candidates are formed from two opposite-signed muons with $p_T > 26$ or two electrons with higher(lower) $E_T> 40(25)$ GeV. Large transverse impact parameter significance with respect to  PV ( $|d_0|/\sigma_d > 12$) is required for tracks to reject promptly produced particles.  In an complemented research using muon system only, muon candidates are reconstructed from muon system alone. An additional refit step is applied to  the candidates to avoid biases from  a loose beamspot constraint in the seeding step. The candidates then referred as \textit{re-fitted stand-alone} (RSA) muons. Also, the muons are vetoed if they can match to track in the inner tracker. The searches are interpreted in term of SM-like Higgs decay ($H\rightarrow XX, X\rightarrow l^+ l^-$) and RPV squarks and provide sensitivity covering $c\tau$ from $ 10^{-2} (10^{-1})$cm to $ 10^{5} (10^{4})$cm for Higgs (RPV) scenario. The tracker-based search show a high sensitivity plateau with $c\tau \sim 10^{-1}-10$ cm in both electron and muon channels, while the combined result of tracker and muon chamber increases the sensitivity for muon channel with $c\tau > 10$cm. The results are shown in Fig. \ref{fig:LpetonicCMStrackerMuMu} and \ref{fig:LpetonicCMSMSMuMu}.
 
 \begin{figure}
     \centering
-    \caption{Caption}
+    \caption{$95\%$ CL upper limits on $\sigma(H^0\rightarrow XX)B(X \rightarrow \mu^{+} \mu^{−} )$ for $M_{H^0} = 1000 GeV/c^2$ with various X mass points. Shaded bands show the $\pm 1\sigma$ range of variation of the expected $95\%$ CL limits for the case of a $20 GeV/c^2$ X boson mass. From tracker-only search \cite{CMSDiLepton2015}}
     \includegraphics[width=0.5\textwidth]{fig/LpetonicCMStrackerMuMu.png}
     \label{fig:LpetonicCMStrackerMuMu}
 \end{figure}
 
 \begin{figure}
     \centering
-    \caption{Caption}
+    \caption{$95\%$ CL upper limits on $\sigma(H^0\rightarrow XX)B(X \rightarrow \mu^{+} \mu^{−} )$ for $M_{H^0} = 1000 GeV/c^2$ with various X mass points. Shaded bands show the $\pm 1\sigma$ range of variation of the expected $95\%$ CL limits for the case of a $20 GeV/c^2$ X boson mass. \cite{CMSDiMuon2015}}
     \includegraphics[width=0.5\textwidth]{fig/LpetonicCMSMSMuMu.png}
     \label{fig:LpetonicCMSMSMuMu}
 \end{figure}
@@ -138,9 +138,9 @@ Lepton-jets are signature with lepton pair or multiple leptons clustered in a na
 
 In the CMS search for lepton-jet, fully muonic lepton-jets are selected from 8 TeV and part of 13 TeV dataset. The 13 TeV study is sensitive to di-muon parent particle masses up to 8.5 GeV triggered by di-muon with standard isolation requirements. Event selection requires at least four muons, forming two opposite-charged muon pairs in minimum. 
 
-In ATLAS 8TeV search, three types of lepton-jets are considered: only-muon jet, electron/pion jet and inclusive of previous two types. The muon-only and electron/pion jet require two or four leptons while the mixted jet must contain two muons plus a jet consistent displaced with electron/pion pair. The trigger adopted requires three muon tracks in MS with $p_T$ > 6GeV, also the \textit{CalRatio} trigger is used for electron lepton-jet when electrons produced in HCAL. A \textit{narrow-scan} muon trigger is added in 13 Tev analysis. This trigger selects events with two muons close in $\eta-\phi$ plane, $\Delta R < 0.5$ with $p_T > 20(6)$GeV for (sub)leading muon. 
+In ATLAS 8TeV search, three types of lepton-jets are considered: only-muon jet, electron/pion jet and inclusive of previous two types. The muon-only and electron/pion jet require two or four leptons while the mixted jet must contain two muons plus a jet consistent displaced with electron/pion pair. The trigger adopted requires three muon tracks in MS with $p_T >$ 6GeV, also the \textit{CalRatio} trigger is used for electron lepton-jet when electrons produced in HCAL. A \textit{narrow-scan} muon trigger is added in 13 Tev analysis. This trigger selects events with two muons close in $\eta-\phi$ plane, $\Delta R < 0.5$ with $p_T > 20(6)$GeV for (sub)leading muon. 
 
-Both the 8 and 13 TeV ATLAS searches are interpreted for Higgs-like scalar particles (with masses of 125 and 800 GeV) that decay effectively into either two or four lepton pairs, with each lepton pair assumed to come from a low-mass “dark" photon, $\gamma_D$ . The ATLAS result excludes exotic Higgs branching ratios below $10\%$ for dark photon lifetimes 2 < $c\tau$ < 100 mm. Note that here $\gamma_D$ is also allowed to decay to pions and so the results can also be interpreted for hadronically and semi-leptonically decaying LLPs. Also, there are some non-collider experiments constraining the parameter space of $\gamma_D$, which will be discussed in following chapter.
+Both the 8 and 13 TeV ATLAS searches are interpreted for Higgs-like scalar particles (with masses of 125 and 800 GeV) that decay effectively into either two or four lepton pairs, with each lepton pair assumed to come from a low-mass “dark" photon, $\gamma_D$ . The ATLAS result excludes exotic Higgs branching ratios below $10\%$ for dark photon lifetimes 2$ < c\tau < $100 mm. Note that here $\gamma_D$ is also allowed to decay to pions and so the results can also be interpreted for hadronically and semi-leptonically decaying LLPs. Also, there are some non-collider experiments constraining the parameter space of $\gamma_D$, which will be discussed in following chapter.
 \begin{figure}
     \centering
     \caption{Comparison of the lepton-jet searches at ATLAS, CMS as well as low-energy experiments with respect to a dark photon scenario}
@@ -148,7 +148,7 @@ Both the 8 and 13 TeV ATLAS searches are interpreted for Higgs-like scalar parti
     \label{fig:lepton-jet}
 \end{figure}
 
-The comparison of CMS and ATLAS searches are displayed in Fig. \cite{fig:lepton-jet}.
+The comparison of CMS and ATLAS searches are displayed in Fig. \ref{fig:lepton-jet}.
 
 
 \subsubsection{Summary for leptonic decay}
@@ -157,15 +157,21 @@ The leptonic searches for LLP are based on fairly standard lepton identification
 
 \subsection{Semi-leptonic decay}
 
-As semi-leptonic signature shares overlap with both leptonic and hadronic channels, many of the discussed searches are partially covered in this scenario.
+As semi-leptonic signature shares overlap with both leptonic and hadronic channels, many of the discussed searches are partially covered in this scenario on ATLAS and CMS. LHCb has dedicated searches for semi-leptonically decaying LLPs and semi-leptonic decays of long-lived Majorana neutrinos coming from $B^-$ mesons. 
 
-\subsubsection{Semileptonic decay in CMS}
+When applying the inclusive hadronic or leptonic searches to interpret semi-leptonic LLP decay, the simultaneous presence of leptons and jets in the signal can degrade the sensitivity. For instance, the leptonic searches require lepton isolation which significantly reduce the signal acceptance for boosted LLPs decaying leptonically. 
 
-\subsubsection{Semileptonic decay in ATLAS}
+In semi-leptonic LLP searches, one of the major gap is still for low-mass LLPs. The leptons from low-mass LLP have low efficiency to trigger or pass the isolation criteria, background from heavy-flavour and other processes are also higher. The low-mass semi-leptonic LLPs are strongly motivated from Heavy Neutral Leptons (HNL) model, which predicts LLPs for HNLs of masses below 30 GeV. The HNL model corresponds to HNL LLP produced associated with prompt lepton, then decay semi-leptonically into $jjl$.
 
-\subsubsection{Semileptonic decay in LHCb}
+The sensitivity of LHC experiments to HNLs is complementary to that of fixed-target experiments which can probe lower couplings due to high-intensity beams albeit at lower mass ranges. The projected sensitivity is shown in Fig.\ref{fig:semileptonic}.
 
-\subsubsection{Summary for semileptonic decay}
+\begin{figure}
+    \centering
+    \caption{Summary of projected experimental sensitivities to HNLs in various experiments, in the coupling strength ($U^2$ for dominant mixing to $\nu_{\mu}$) vs. mass plane.}
+    \includegraphics[width=0.5\textwidth]{fig/semileptonic.png}
+    \label{fig:semileptonic}
+\end{figure}
+
 
 \subsection{Photonic decay}
 
